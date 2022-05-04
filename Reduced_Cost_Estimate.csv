@@ -1,0 +1,16 @@
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+Initial_Cost_Estimate,US East (N. Virginia),,VPN Connection,0,0,0.00,USD,Working days per month (22)
+Initial_Cost_Estimate,US East (N. Virginia),,Network Address Translation (NAT) Gateway,0,32.89,394.68,USD,Number of NAT Gateways (1)
+Initial_Cost_Estimate,US East (N. Virginia),,Data Transfer,0,0.02,0.24,USD,"DT Inbound: Not selected (0 TB per month), DT Outbound: US East (N. Virginia) (1 GB per month), DT Intra-Region: (0 TB per month), Data transfer cost (0.02)"
+Initial_Cost_Estimate,US East (N. Virginia),,Amazon CloudFront,0,2513.8,30165.60,USD,"Data transfer out to internet (30 TB per month), Number of requests (HTTPS) (5000000 per month)"
+Initial_Cost_Estimate,US East (N. Virginia),,S3 Standard,0,771.25,9255.00,USD,S3 Standard storage (30 TB per month)
+Initial_Cost_Estimate,US East (N. Virginia),,Data Transfer,0,0,0.00,USD,"DT Inbound: Internet (15 TB per month), DT Outbound: Amazon CloudFront (15 TB per month)"
+Initial_Cost_Estimate,US East (N. Virginia),Web Servers,Amazon EC2,0,544.26,6531.12,USD,"Operating system (Linux), Storage amount (30 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month), Workload (Consistent, Number of instances: 50), Advance EC2 instance (t4g.nano), Pricing strategy (EC2 Instance Savings Plans 1 Year  None upfront), Snapshot Frequency (2x Daily), Amount changed per snapshot (3 GB)"
+Initial_Cost_Estimate,US East (N. Virginia),App Servers,Amazon EC2,0,1088.53,13062.36,USD,"Operating system (Linux), Storage amount (30 GB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month), Workload (Consistent, Number of instances: 100), Advance EC2 instance (t4g.nano), Pricing strategy (EC2 Instance Savings Plans 1 Year  None upfront), Snapshot Frequency (2x Daily), Amount changed per snapshot (3 GB)"
+Initial_Cost_Estimate,US East (N. Virginia),,Amazon RDS for MySQL,0,697.45,8369.40,USD,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (50 GB), Quantity (2), Instance type (db.m1.large), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Multi-AZ), Pricing strategy (OnDemand), Additional backup storage (30 GB)"
+
+
+I reduced the number of Web servers (EC2) from 100 to 50, and the number of App Servers (EC2) from 200 to 100. I also reduced the number of DB instances from 5 to 2. The new setup after the reduction has a reduced capacity hence some users might need to retry some requests during the peak hours.
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
