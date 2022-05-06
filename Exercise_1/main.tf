@@ -10,9 +10,9 @@ terraform {
 }
 
 provider "aws" {
-  access_key = "ASIATYHHRLITZ2DX4BMV"
-  secret_key = "/YJHjJJdStZMCEb9L1J6nnxM1AcYWrSF0TjsHX1e"
-  token = "FwoGZXIvYXdzELr//////////wEaDI/1NZKe8QJ6WxCrqSLVAZAwzD4raGL6fIcehlTU0AiAzxUQiGabUGKw6Rx3zjPk9az/n1GaY1vIOiF5NtkUlQJWf9Y/ROXtci7G9Lv0KoBM1X7IPE3ljcBC3/Sse1h6xUsXhhnJfRmPuliIZc+N+uGxL5FCoQNsOUXSCR+j180ILwRtxKBdq4Gxz+WHEmG4LbOQZgywxYXy2CoCY2HDPEcMTh0I6feMTaU4rF6tS6NS0KEOhF6D+E5GSdga494B+3ffQSkrLHd7ydvpLg8HRTYOpJ8/7JEn0N0E7p5NajBAxYvQfyiu+8iTBjItvrzPkXZERMwUTv2dzNKL1QNQtYy4jjBZCj1V8o16nd+SLpWJroVv0+MKeCqk"
+  access_key = "ASIATYHHRLITTTYLCP75"
+  secret_key = "JioGj2q0qFDMqrqTi+4MOJPJMJnb+K+bFJz7uDL+"
+  token = "FwoGZXIvYXdzEO3//////////wEaDPJZ2gHo/tG3kMKpNyLVAWAMKomUb+ZkVAc3Yv5Uf9wTjfzvdnbTsjJN6MoBN1utQFK0mlifWopej+4du4x0BLYgvHjxpjjH0mR33NDR50lZuJqCLWoZhRez838+CwaEMuY664eB+LeDyztk6Q9YRMUSYat4jZNY1reKrsMAuMHeMfJm/sletaRguF5GmmlKHS2W0AzJUJlctX2Ur2bhIaAwZMIw9zmxOCtgZHoMHx6O8eTwh1p6FJu8Ny+pBRF+SzhZiAghZYgweelxwglCH25FgIUVQLs6PhlqNo5QSHBLySxpAii5h9STBjItgnMl08uBS1g/Zpj1h7kr1hnbI2BQqNHrjGSNK2DHvQgTJIPPveDiobkA/1e3"
   region = "us-east-1"
 }
 
@@ -21,10 +21,10 @@ resource "aws_instance" "Udacity_T2" {
   count = "4"
   ami = "ami-0323c3dd2da7fb37d"
   instance_type = "t2.micro"
-  subnet_id   = "subnet-06e53470a45402bd4"
+  subnet_id   = "subnet-0abf91346e15ed3ca"
 
   tags = {
-    name = "Udacity T2"
+    Name = "Udacity T2"
   }
 }
 
@@ -33,9 +33,9 @@ resource "aws_instance" "Udacity_M4" {
   count = "2"
   ami = "ami-0323c3dd2da7fb37d"
   instance_type = "m4.large"
-  subnet_id   = "subnet-06e53470a45402bd4"
+  subnet_id   = "subnet-0abf91346e15ed3ca"
 
   tags = {
-    name = "Udacity M4"
+    Name = "Udacity M4"
   }
 }
